@@ -1,6 +1,6 @@
 <?php
 require_once "controllers/facultadesController.php";
-require_once "Controllers/userController.php"; //aun no está desarrollado
+require_once "Controllers/userController.php"; 
 $action = $_GET["action"];
 define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
 
