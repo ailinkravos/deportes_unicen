@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-29 00:53:33
+/* Smarty version 3.1.33, created on 2019-10-30 22:52:43
   from 'C:\xampp2\htdocs\pagdeportes\Deportes\deportes_unicen\templates\ver_facultades.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db77f7d0f0382_84872675',
+  'unifunc' => 'content_5dba062b0ecba0_04480671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd4d7d791099b5a66a54859c60249e68ca883e53b' => 
     array (
       0 => 'C:\\xampp2\\htdocs\\pagdeportes\\Deportes\\deportes_unicen\\templates\\ver_facultades.tpl',
-      1 => 1572306810,
+      1 => 1572472360,
       2 => 'file',
     ),
   ),
@@ -21,13 +21,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_5db77f7d0f0382_84872675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dba062b0ecba0_04480671 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <header>
-        <h1 class="titulo">Olimpiadas Interfacultades</h1>
-        <img class="logo" src="../images/logodeporte.jpg" alt="logo de deportes de la unicen" />
-</header>
+        <h1 class="titulo"><?php echo $_smarty_tpl->tpl_vars['facultades']->value[0]->nombre_facultad;?>
+</h1>
+        </header>
 <h3 id = "menu">Menú</h3>
     <nav class = nonav>
         <ul>
