@@ -1,14 +1,19 @@
 {include 'templates/header.tpl'} 
 <form> 
-<div class="form-group"> 
-<label for="exampleInputEmail1">Email address</label> 
-<input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
-<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> 
-</div> 
-<div class="form-group"> 
-<label for="exampleInputPassword1">Password</label> 
-<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
-</div> 
-<button type="submit" class="btn btn-primary">Submit</button> 
+    <div class="form-group"> 
+        <label for="correo">Email</label> 
+        <input type="username" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Ingresa el email">  
+    </div> 
+    <div class="form-group"> 
+        <label for="InputPassword1">Password</label> 
+        <input type="password" class="form-control" id="InputPassword1" placeholder="Contraseña"> 
+        {if $error}
+        <div class="alert alert-danger" role="alert">
+            {$error}
+        </div>
+        {/if}
+    </div> 
+    <button type="submit" class="btn btn-primary">Enviar</button> 
 </form> 
 {include 'templates/footer.tpl'}
+

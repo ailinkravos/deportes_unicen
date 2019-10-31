@@ -49,3 +49,4 @@
      </ul>
     </form> 
 </div>
+{include file='templates/footer.tpl'}

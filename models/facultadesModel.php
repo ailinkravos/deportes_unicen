@@ -26,7 +26,7 @@ class facultadesModel{
     }
     //actualiza el elemento facultad
     public function end($idFacultad,$titulo){ //le envío el ID de la facultad que quiero modificar y el valor que tengo que insertar
-     $query->$this->db->prepare ('UPDATE facultades SET titulo=? WHERE id_facultad=?'); //le pido que me modifique en la DB (UPDATE) el atributo (SET)que tenga tal ID (WHERE)
+     $query=$this->db->prepare ('UPDATE facultades SET titulo=? WHERE id_facultad=?'); //le pido que me modifique en la DB (UPDATE) el atributo (SET)que tenga tal ID (WHERE)
      $query->execute([$idFacultad,$titulo]);//Ejecuto la sentencia con los parámetros que me fueron pasados
     }
     //guarda un elemento nuevo en la DB 

@@ -1,34 +1,35 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-30 22:23:15
+/* Smarty version 3.1.33, created on 2019-10-31 22:18:09
   from 'C:\xampp\htdocs\DepUnicen\deportes_unicen\templates\ver_facultades.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db9ff4377c066_25209712',
+  'unifunc' => 'content_5dbb4f91235634_08886079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ade5cd056fb836b697ed6679307769b584f54bfd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DepUnicen\\deportes_unicen\\templates\\ver_facultades.tpl',
-      1 => 1572470515,
+      1 => 1572556681,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
+    'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5db9ff4377c066_25209712 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dbb4f91235634_08886079 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <header>
-        <h1 class="titulo">Olimpiadas Interfacultades</h1>
-        <img class="logo" src="../images/logodeporte.jpg" alt="logo de deportes de la unicen" />
-</header>
-<h3 id = "menu">Menú</h3>
+        <h1 class="titulo"><?php echo $_smarty_tpl->tpl_vars['facultades']->value[0]->nombre_facultad;?>
+</h1>
+        </header>
+<h2 id = "menu">Menú</h2>
     <nav class = nonav>
         <ul>
                         <?php
@@ -43,6 +44,9 @@ site/<?php echo $_smarty_tpl->tpl_vars['facultad']->value->nombre_facultad;?>
                             <?php
 }
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </ul>
+    </nav>
+<?php $_smarty_tpl->_subTemplateRender('file:templates/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }
