@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-31 22:29:51
+/* Smarty version 3.1.33, created on 2019-10-31 22:41:09
   from 'C:\xampp\htdocs\DepUnicen\deportes_unicen\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dbb524f4fc337_19645542',
+  'unifunc' => 'content_5dbb54f54592c8_23852080',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fed02c1ddc7292ba25354c172842f080aa9b2dd1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DepUnicen\\deportes_unicen\\templates\\header.tpl',
-      1 => 1572557388,
+      1 => 1572557586,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5dbb524f4fc337_19645542 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dbb54f54592c8_23852080 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
     <html lang "en">
     <head>
@@ -35,7 +35,23 @@ function content_5dbb524f4fc337_19645542 (Smarty_Internal_Template $_smarty_tpl)
 </title>
     </head>
     <body>
-        <nav>
-
-        </nav>    <?php }
+        <h2 id = "menu">Menú</h2>
+    <nav class = nonav>
+        <ul>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['facultades']->value, 'facultad');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['facultad']->value) {
+?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+site/<?php echo $_smarty_tpl->tpl_vars['facultad']->value->nombre_facultad;?>
+"><?php echo $_smarty_tpl->tpl_vars['facultad']->value->nombre_facultad;?>
+</li>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </ul>
+    </nav> 
+    <?php }
 }

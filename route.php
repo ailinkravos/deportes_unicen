@@ -1,7 +1,6 @@
 <?php
 require_once "controllers/facultadesController.php"; 
 require_once "controllers/loginController.php";
-require_once "controllers/userController.php"; 
 require_once "controllers/copasController.php";
 
 $action = $_GET["action"];
