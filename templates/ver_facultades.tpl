@@ -11,3 +11,6 @@
                 <li><a href="{$URL}site/{$facultad->nombre_facultad}">{$facultad->nombre_facultad}</li>
                 {* <li>{$facultad->nombre_facultad}</li> *}
             {/foreach}
+        </ul>
+    </nav>
+{include file ='templates/footer.tpl'}

@@ -7,5 +7,6 @@
     </p> 
 </div>
 {* <img src="">// url guardada en la BD (una nueva columna en la tabla) *}
+{include file='templates/footer.tpl'}
 
 
