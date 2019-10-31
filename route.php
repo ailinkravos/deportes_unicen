@@ -5,6 +5,7 @@ require_once "controllers/copasController.php";
 
 $action = $_GET["action"];
 define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
+
 $controller=new facultadesController();
 
 if($action == ''){

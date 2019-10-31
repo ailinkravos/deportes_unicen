@@ -6,12 +6,14 @@ class copasController{
     private $model;
     private $view;
 
-function __construct(){
-$this->model=new copasModel();
-$copas->$this->model->getCopas();
-}
-//muestra las copas
-public function displayCopas(){
-    $this->view->displayCopas();
-}
+    function __construct(){
+     $this->model=new copasModel();
+        $ganador=$this->model->getCopas();
+    }
+
+    //muestra las copas
+    public function displayCopas(){
+        $this->view = new copasModel($ganador);
+        $this->view->displayCopas($ganador);
+    }
 }
