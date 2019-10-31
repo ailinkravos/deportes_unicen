@@ -12,6 +12,12 @@
         <title>{$titulo}</title>
     </head>
     <body>
-        <nav>
-
-        </nav>    
+        <h2 id = "menu">Menú</h2>
+    <nav class = nonav>
+        <ul>
+            {foreach from=$facultades item=facultad}
+                <li><a href="{$URL}site/{$facultad->nombre_facultad}">{$facultad->nombre_facultad}</li>
+            {/foreach}
+        </ul>
+    </nav> 
+    

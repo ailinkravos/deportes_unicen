@@ -8,9 +8,7 @@ class facultadesController{
     private $view;
 
     function __construct () {
-  
       $this->model=new facultadesModel();
-      
       $facultades=$this->model->getFacultades();
       $this->view=new facultadesView($facultades);
     }

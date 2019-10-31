@@ -1,6 +1,8 @@
 <?php
 require_once "controllers/facultadesController.php"; 
 require_once "controllers/loginController.php";
+require_once "controllers/userController.php"; 
+require_once "controllers/copasController.php";
 
 $action = $_GET["action"];
 
@@ -44,4 +46,17 @@ if($action == ''){
             $controller->addFacultad();
              //agrega facultad
         }
-    }           
+        elseif($partesURL[0]=="mostrarCopas"){
+            $controllerCopas=new copasController();
+            $copasController -> displayCopas();
+            //muestra las copas de la facultad
+        }
+        // elseif($partesURL[0]=="alumno"){
+        //     $controllerAlumno=new alumnosController();
+        //     $alumnosController -> displayAlumnos();
+        //     //muestra los alumnos de la facultad ?? 
+        // }
+        else{
+            $controller->getFacultades();
+        }
+    }    
