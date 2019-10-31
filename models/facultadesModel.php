@@ -30,8 +30,8 @@ class facultadesModel{
      $query->execute([$idFacultad,$titulo]);//Ejecuto la sentencia con los parámetros que me fueron pasados
     }
     //guarda un elemento nuevo en la DB 
-    public function save ($titulo, $descripcion,$prioridad){
-     $query->$this->db->prepare('INSERT INTO facultades(titulo, descripcion, prioridad) VALUES (?,?,?)'); //acá le digo que me inserte (INSERT INTO) un elemento nuevo con esos atributos
-     $query->execute([$titulo]);
+    public function save ($nombre_facultad,$sede,$historia){ //chequear parámetros 
+     $query->$this->db->prepare('INSERT INTO facultades(nombre_facultad,sede,historia) VALUES (?,?,?)'); //acá le digo que me inserte (INSERT INTO) un elemento nuevo con esos atributos
+     $query->execute([$titulo]); //execute ??
     }
 }
