@@ -2,32 +2,28 @@
 require_once "controllers/facultadesController.php"; 
 require_once "controllers/loginController.php";
 require_once "controllers/copasController.php";
-
-$action = $_GET["action"];
+require_once "controllers/securedController.php";
 
 //Constantes
 define("HOME", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
 define("URL_LOGIN", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/login');
 define("URL_LOGOUT", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/logout');
 
-// CONSTANTES PARA RUTEO
-define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
-define("LOGIN", BASE_URL . 'login');
-define("VER", BASE_URL . 'ver');
 
-$controller=new facultadesController();
+$action = $_GET["action"];
+$facultadesController=new facultadesController();
+$loginController=new loginController();
+$copasController=new copasController();
+$securedController=new securedController();
 
 // si no viene una "action", definimos una por defecto
 if($action == ''){
-    $_GET['action'] = 'ver';
-    $_GET['action'] = 'login';
     $controller->getFacultades();
 }else{
     if (isset($action)){
         $partesURL = explode("/", $action);
         if($partesURL[0]=="login"){
-            $controller = new loginController();
-            $controller->showLogin();
+            $loginController->showLogin();
         }
         elseif($partesURL[0] == "site"){
             $controller->getFacultad($partesURL[1]);

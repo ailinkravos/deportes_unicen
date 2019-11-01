@@ -1,22 +1,23 @@
 <?php
 
 class userModel{
-    private $user;
-
-    public function __construct(){
-        $this->user= new PDO('mysql:host=localhost;'.'dbname=db_usuario;charset=utf8','root','');
-    }
-    
-    //obtiene un usario
-    public function getByUserName($username){
-        $query=$this->user->prepare('SELECT * FROM facultad WHERE nombre_facultad=?');
-        $query->execute(array($fNombre));
-        return $query->fetch(PDO::FETCH_OBJ);
-    }
-    
-    //guarda un usuario nuevo en la DB 
-    public function save ($email, $contraseña){
-        $query=$this->user->prepare('INSERT INTO usario(email, contraseña) VALUES (?,?)'); //acá le digo que me inserte (INSERT INTO) un elemento nuevo con esos atributos
-        $query->execute([$email, $contraseña]);
+private $db;
+     
+public function __construct(){
+         $this->db = new PDO('mysql:host=localhost;'.'dbname=db_usuario;charset=utf8', 'root', '');
+}
+public function getByUserEmail($userEmail){
+        //obtengo el mail de la BBDD igual al mail ingresado por el usuario
+        $query = $this -> db -> prepare('SELECT * FROM checkuser WHERE email= ?');
+        $query -> execute(array($userEmail));
+        $emailBD = $query -> fetch(PDO::FETCH_OBJ);
+        return $emailBD;
+        }
+//PERTENECE A REGISTRARSE - NO ES PARA PRIMER ENTREGA    
+    public function signIn($userNameSignIn, $userEmailSigIn, $hash){
+        //hago envio de name, email y password a la BBDD
+        $query = $this -> db -> prepare('INSERT INTO checkuser(email, pass) VALUES(?,?)');
+        $query ->execute(array($userNameSignIn, $userEmailSigIn, $hash));
     }
 }
+
