@@ -12,8 +12,8 @@ define("URL_LOGOUT", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT
 
 // CONSTANTES PARA RUTEO
 define("BASE_URL", 'http://'.$_SERVER["SERVER_NAME"].':'.$_SERVER["SERVER_PORT"].dirname($_SERVER["PHP_SELF"]).'/');
-    define("LOGIN", BASE_URL . 'login');
-    define("VER", BASE_URL . 'ver');
+define("LOGIN", BASE_URL . 'login');
+define("VER", BASE_URL . 'ver');
 
 $controller=new facultadesController();
 

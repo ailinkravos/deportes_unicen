@@ -11,7 +11,7 @@ class facultadesView{
         $this->smarty->assign ('URL',BASE_URL);
         $this->smarty->assign('facultades', $facultades); //declaro una variable con el valor de la variable pasada por parámetro.
     }
-     public function displayFacultades(){
+     public function displayFacultades($facultad="Olimpiadas"){
         $this->smarty->display ('../templates/ver_facultades.tpl'); //le digo que muestre el archivo template
      }
 
