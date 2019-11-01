@@ -12,7 +12,8 @@
                  <td>Edici&oacuten</td>
             </tr>
             <tr>
-                {* <td>{$copas->año}</td> lo comenté por que me salta error*} 
+                <td>{$copas->ganador}</td> 
+                {* lo comenté por que me salta error  *}
                 {* <td>{$copas->edicion}</td> lo comenté por que me salta error *}
              </tr>
 
